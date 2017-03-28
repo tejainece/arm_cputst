@@ -61,7 +61,7 @@ LoopFillZerobss:
 	// Call the application's entry point
   mov r0, r6
   bl  main
-  bx  lr    
+  b		Infinite_Loop
 
     .section  .text.Default_Handler,"ax",%progbits
 Default_Handler:
