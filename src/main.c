@@ -1,8 +1,14 @@
 #include <stdint.h>
 
-extern uint32_t cputst_work(uint32_t a, uint32_t b);
+typedef uint8_t bool_t;
+
+extern bool_t cputst_work(void);
 
 void main() {
-	uint32_t c = cputst_work(5, 5);
-	c++;
+	bool_t c = cputst_work();
+
+	uint32_t failureCnt = 0;
+	if(c == 0) {
+		failureCnt++;
+	}
 }
